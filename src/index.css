@@ -1,0 +1,168 @@
+@import "slick-carousel/slick/slick.css";
+@import "slick-carousel/slick/slick-theme.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* IELTS Pathways Design System - Professional Education Theme */
+@font-face {
+  font-family: 'MetroNovaProBlack';
+  src: url('@/assets/metro-nova-pro-black.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@layer base {
+  :root {
+    /* IELTS Brand Colors */
+    --background: 0 0% 100%;
+    --foreground: 220 13% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    --primary: 0 70% 50%; /* IELTS Red #D32F2F */
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 0 70% 45%;
+
+    --secondary: 220 13% 96%;
+    --secondary-foreground: 220 13% 18%;
+
+    --muted: 220 13% 96%;
+    --muted-foreground: 220 9% 46%;
+
+    --accent: 220 13% 96%;
+    --accent-foreground: 220 13% 18%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 220 13% 91%;
+    --ring: 0 70% 50%;
+
+    /* Educational Theme Colors */
+    --education-blue: 215 84% 47%;
+    --education-green: 142 76% 36%;
+    --education-orange: 25 95% 53%;
+    --success: 142 76% 36%;
+    --warning: 45 93% 47%;
+    --info: 215 84% 47%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(0 70% 50%), hsl(0 70% 45%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 70% 50% / 0.9), hsl(220 13% 18% / 0.8));
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%), hsl(220 13% 98%));
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px hsl(220 13% 18% / 0.1);
+    --shadow-medium: 0 4px 16px hsl(220 13% 18% / 0.15);
+    --shadow-large: 0 8px 32px hsl(220 13% 18% / 0.2);
+    --shadow-primary: 0 4px 16px hsl(0 70% 50% / 0.3);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 220 13% 9%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 13% 12%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 13% 12%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 0 70% 55%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 0 70% 50%;
+
+    --secondary: 220 13% 18%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 13% 18%;
+    --muted-foreground: 220 9% 65%;
+
+    --accent: 220 13% 18%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 62.8% 50%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 13% 18%;
+    --input: 220 13% 18%;
+    --ring: 0 70% 55%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+
+  .container-max {
+    @apply max-w-7xl mx-auto;
+  }
+
+  .gradient-text {
+    @apply bg-gradient-to-r from-primary to-primary-hover bg-clip-text text-transparent;
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  .shadow-medium {
+    box-shadow: var(--shadow-medium);
+  }
+
+  .shadow-large {
+    box-shadow: var(--shadow-large);
+  }
+
+  .shadow-primary {
+    box-shadow: var(--shadow-primary);
+  }
+}
